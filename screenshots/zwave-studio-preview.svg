@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#7C4DFF" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#bgGrad)" />
+
+  <!-- Grid lines -->
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.4">
+    <line x1="100" y1="0" x2="100" y2="700" />
+    <line x1="300" y1="0" x2="300" y2="700" />
+    <line x1="500" y1="0" x2="500" y2="700" />
+    <line x1="700" y1="0" x2="700" y2="700" />
+    <line x1="900" y1="0" x2="900" y2="700" />
+    <line x1="1100" y1="0" x2="1100" y2="700" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="560" x2="1200" y2="560" />
+  </g>
+
+  <!-- Header Banner -->
+  <rect x="50" y="40" width="1100" height="90" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+  <circle cx="95" cy="85" r="24" fill="#00E5FF" opacity="0.15" />
+  <text x="95" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900" fill="#00E5FF" text-anchor="middle">📡</text>
+  <text x="135" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" fill="#f8fafc">ZWaveForge <tspan fill="#00E5FF">Pro</tspan></text>
+  <text x="135" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#94a3b8">Z-Wave Plus v2 / ZWLR S2 Security Studio &amp; ITU-T G.9959 Auditor</text>
+
+  <!-- Status badges -->
+  <rect x="850" y="68" width="110" height="32" rx="16" fill="#00E5FF" opacity="0.1" stroke="#00E5FF" stroke-width="1" />
+  <text x="905" y="89" font-family="monospace" font-size="12" font-weight="700" fill="#00E5FF" text-anchor="middle">Z-Wave S2</text>
+  <rect x="975" y="68" width="145" height="32" rx="16" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="1" />
+  <text x="1047" y="89" font-family="monospace" font-size="12" font-weight="700" fill="#10b981" text-anchor="middle">AUDIT: 10/10 PASS</text>
+
+  <!-- Left Card: S2 Security Encapsulation & DSK -->
+  <rect x="50" y="150" width="535" height="500" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+  <text x="80" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#f8fafc">S2 Security Encapsulation Architecture</text>
+
+  <!-- S2 Parameters Box -->
+  <g transform="translate(80, 215)">
+    <rect x="0" y="0" width="475" height="135" rx="8" fill="#030712" stroke="#1e293b" />
+    <text x="15" y="26" font-family="monospace" font-size="12" fill="#94a3b8">Command Class:     <tspan fill="#00E5FF">COMMAND_CLASS_SWITCH_BINARY (0x25)</tspan></text>
+    <text x="15" y="50" font-family="monospace" font-size="12" fill="#94a3b8">Command ID:        <tspan fill="#7C4DFF">SWITCH_BINARY_SET (0x01, Val: 0xFF ON)</tspan></text>
+    <text x="15" y="74" font-family="monospace" font-size="12" fill="#94a3b8">Security 2 Class:  <tspan fill="#f59e0b">S2_AUTHENTICATED (Key ID: 0x02)</tspan></text>
+    <text x="15" y="98" font-family="monospace" font-size="12" fill="#94a3b8">Node ID Addressing:<tspan fill="#10b981">Node 12 (Classic Mesh 1-232 / ZWLR 1-4000)</tspan></text>
+    <text x="15" y="122" font-family="monospace" font-size="12" fill="#38bdf8">Encryption Engine: <tspan fill="#facc15">AES-128-CCM (8-Byte MAC Authentication Tag)</tspan></text>
+  </g>
+
+  <!-- Raw Hex Stream Box -->
+  <text x="80" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#94a3b8">S2 Encapsulated Wire Stream (15 Bytes):</text>
+  <rect x="80" y="395" width="475" height="75" rx="8" fill="#030712" stroke="#1e293b" />
+  <text x="95" y="425" font-family="monospace" font-size="14" font-weight="700" fill="#facc15">9f 01 1a 02 10 e7 19 7a 1f 4b 09 c2 55 e0 92</text>
+  <text x="95" y="450" font-family="monospace" font-size="11" fill="#38bdf8">Byte 0 [0x9F]: CC S2 | Byte 1 [0x01]: Encapsulation | Byte 3 [0x02]: Key ID</text>
+
+  <!-- DSK & SmartStart Box -->
+  <text x="80" y="495" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#94a3b8">Device Specific Key (DSK) &amp; SmartStart QR:</text>
+  <rect x="80" y="510" width="475" height="115" rx="8" fill="#090d16" stroke="#1e293b" />
+  <text x="95" y="535" font-family="monospace" font-size="11" fill="#cbd5e1">DSK (128-bit): 12345678901234567890123456789012</text>
+  <text x="95" y="558" font-family="monospace" font-size="11" fill="#cbd5e1">SmartStart PIN: <tspan fill="#10b981">04660 (First 5 Decimal Digits Out-of-Band)</tspan></text>
+  <text x="95" y="582" font-family="monospace" font-size="11" fill="#facc15">SPAN Freshness: Synchronized Nonce State (No Stale Keystreams)</text>
+  <text x="95" y="605" font-family="monospace" font-size="11" fill="#10b981">✓ Verified compliant for Z-Wave Plus v2 &amp; ZWLR Certification</text>
+
+
+  <!-- Right Card: 10-Point Normative Zero-Trust Compliance Auditor -->
+  <rect x="615" y="150" width="535" height="500" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+  <text x="645" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#f8fafc">10-Point Normative Zero-Trust Compliance Auditor</text>
+
+  <!-- Checklist items -->
+  <g transform="translate(645, 215)">
+    <rect x="0" y="0" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="19" r="8" fill="#10b981" />
+    <text x="20" y="23" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Z-Wave Security 2 (S2) Class Allocation (RFC G.9959)</text>
+
+    <rect x="0" y="44" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="63" r="8" fill="#10b981" />
+    <text x="20" y="67" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="67" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Device Specific Key (DSK) 128-bit Entropy &amp; PIN Format</text>
+
+    <rect x="0" y="88" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="107" r="8" fill="#10b981" />
+    <text x="20" y="111" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="111" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Node ID Network Addressing Bounds (Classic &amp; ZWLR)</text>
+
+    <rect x="0" y="132" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="151" r="8" fill="#10b981" />
+    <text x="20" y="155" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Mandatory Z-Wave Plus v2 CCs (5E, 86, 9F) Instantiated</text>
+
+    <rect x="0" y="176" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="195" r="8" fill="#10b981" />
+    <text x="20" y="199" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="199" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">SPAN Nonce Freshness &amp; Anti-Replay Guardrails</text>
+
+    <rect x="0" y="220" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="239" r="8" fill="#10b981" />
+    <text x="20" y="243" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="243" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">SmartStart QR Provisioning &amp; Z-Wave Alliance Compliance</text>
+
+    <rect x="0" y="264" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="283" r="8" fill="#10b981" />
+    <text x="20" y="287" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="287" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">ITU-T G.9959 Sub-GHz Regional RF Frequency Plan (908.4 MHz)</text>
+
+    <rect x="0" y="308" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="327" r="8" fill="#10b981" />
+    <text x="20" y="331" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="331" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Association Group 1 (Lifeline) Controller Mapping</text>
+
+    <rect x="0" y="352" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="371" r="8" fill="#10b981" />
+    <text x="20" y="375" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">State Change Unsolicited Report Feedback Loop</text>
+
+    <rect x="0" y="396" width="475" height="38" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="1" />
+    <circle cx="20" cy="415" r="8" fill="#10b981" />
+    <text x="20" y="419" font-family="monospace" font-size="11" fill="#022c22" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="38" y="419" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">Power Profile &amp; Listening Mode Conformance (FLiRS / Sleeping)</text>
+  </g>
+</svg>
